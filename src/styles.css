@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.content {
+    padding: 60px;
+  }
+  
+  form {
+    border: 1px solid #e1e1e1;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
