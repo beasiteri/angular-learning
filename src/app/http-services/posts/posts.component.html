@@ -1,0 +1,26 @@
+<div class="content" role="main">
+  <h2>HTTP Requests learning</h2>
+  <input
+    class="list-group form-control mb-3"
+    type="text"
+    #title
+    placeholder="Add new item"
+    (keyup.enter)="createPost(title)">
+  <ul class="list-group">
+    <li
+      *ngFor="let post of posts"
+      class="list-group-item">
+      <button
+        class="btn btn-outline-secondary btn-sm"
+        (click)="updatePost(post)">
+        Update
+      </button>
+      <button
+        class="btn btn-outline-danger btn-sm mx-3"
+        (click)="deletePost(post)">
+        Delete
+      </button>
+      {{ post.title }}
+    </li>
+  </ul>
+</div>
