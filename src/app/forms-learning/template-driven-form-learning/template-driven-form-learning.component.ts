@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: 'template-driven-form',
-  templateUrl: './template-driven-form.component.html',
-  styleUrls: ['./template-driven-form.component.css'],
+  selector: 'template-driven-form-learning',
+  templateUrl: './template-driven-form-learning.component.html',
+  styleUrls: ['./template-driven-form-learning.component.css'],
 })
-export class TemplateDrivenFormComponent {
+export class TemplateDrivenFormLearningComponent {
   contactMethods = [
     {id: 1, name: 'Email'},
     {id: 2, name: 'Phone'},

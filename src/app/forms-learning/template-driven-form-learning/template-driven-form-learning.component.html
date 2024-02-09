@@ -18,8 +18,8 @@
           (change)="log(firstName)"
         />
         <div
-          class="alert alert-danger"
           *ngIf="firstName.touched && !firstName.valid"
+          class="alert alert-danger"
         >
           <div *ngIf="firstName.errors?.['required']">First Name is required</div>
           <div *ngIf="firstName.errors?.['pattern']">Invalid input. It should match the pattern 'banana'</div>

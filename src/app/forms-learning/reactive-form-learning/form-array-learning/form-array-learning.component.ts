@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { FormGroup, FormArray, FormControl, AbstractControl } from '@angular/forms';
 
 @Component({
-  selector: 'my-form-array',
-  templateUrl: './my-form-array.component.html',
+  selector: 'form-array-learning',
+  templateUrl: './form-array-learning.component.html',
 })
-export class MyFormArrayComponent {
+export class FormArrayLearningComponent {
 	form = new FormGroup({
 		topics: new FormArray([])
 	})

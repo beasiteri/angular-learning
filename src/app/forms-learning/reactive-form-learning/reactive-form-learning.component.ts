@@ -3,10 +3,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { UsernameValidators } from './username.validators';
 
 @Component({
-  selector: 'my-reactive-form',
-  templateUrl: './my-reactive-form.component.html',
+  selector: 'reactive-form-learning',
+  templateUrl: './reactive-form-learning.component.html',
 })
-export class MyReactiveFormComponent {
+export class ReactiveFormLearningComponent {
   myForm = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.minLength(3), UsernameValidators.cannotContainSpace], UsernameValidators.shouldBeUnique),
     password: new FormControl('', Validators.required)

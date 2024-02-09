@@ -4,18 +4,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
-import { MyReactiveFormComponent } from './my-reactive-form/my-reactive-form.component';
-import { MyFormArrayComponent } from './my-reactive-form/my-form-array/my-form-array.component';
-import { PostsComponent } from './http-services/posts/posts.component';
+import { TemplateDrivenFormLearningComponent } from './forms-learning/template-driven-form-learning/template-driven-form-learning.component';
+import { ReactiveFormLearningComponent } from './forms-learning/reactive-form-learning/reactive-form-learning.component';
+import { FormArrayLearningComponent } from './forms-learning/reactive-form-learning/form-array-learning/form-array-learning.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TemplateDrivenFormComponent,
-    MyReactiveFormComponent,
-    MyFormArrayComponent,
-    PostsComponent
+    TemplateDrivenFormLearningComponent,
+    ReactiveFormLearningComponent,
+    FormArrayLearningComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,11 +22,10 @@ import { PostsComponent } from './http-services/posts/posts.component';
     HttpClientModule,
   ],
   exports: [
-    TemplateDrivenFormComponent,
-    MyReactiveFormComponent,
-    MyFormArrayComponent,
+    TemplateDrivenFormLearningComponent,
+    ReactiveFormLearningComponent,
+    FormArrayLearningComponent,
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
