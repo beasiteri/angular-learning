@@ -1,47 +1,47 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Photo } from '../../modules/http-learning/components/http-learning.interfaces';
 import { catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { AppError } from '../../common/app-error';
 import { NotFoundError } from '../../common/not-found-error';
 import { BadInput } from '../../common/bad-inputs';
+import { ResourceWithId } from './data.interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class DataService<T extends ResourceWithId> {
   constructor(
     @Inject('URL') private url: string,
     private http: HttpClient,
   ) { }
 
   getAll() {
-    return this.http.get<Photo[]>(this.url).pipe(
-      map((response: Photo[]) => response),
+    return this.http.get<T[]>(this.url).pipe(
+      map((response: T[]) => response),
       catchError(this.handleError)
     );
   }
 
-  create(resource: Photo) {
-    return this.http.post<Photo>(this.url, JSON.stringify(resource)).pipe(
-      map((response: Photo) => response),
+  create(resource: T) {
+    return this.http.post<T>(this.url, JSON.stringify(resource)).pipe(
+      map((response: T) => response),
       catchError(this.handleError)
     );
   }
 
-  update(resource: Photo, updatedPhoto: Photo) {
+  update(resource: T, updatedT: T) {
     return this.http
-      .patch<Photo>(`${this.url}/${resource.id}`, updatedPhoto)
+      .patch<T>(`${this.url}/${resource.id}`, updatedT)
       .pipe(
-        map((response: Photo) => response),
+        map((response: T) => response),
         catchError(this.handleError)
       );
   }
 
-  delete(resource: Photo) {
-    return this.http.delete<Photo>(`${this.url}/${resource.id}`).pipe(
-      map((response: Photo) => response),
+  delete(resource: T) {
+    return this.http.delete<T>(`${this.url}/${resource.id}`).pipe(
+      map((response: T) => response),
       catchError(this.handleError)
     );
   }

@@ -26,6 +26,7 @@ export class HttpLearningComponent implements OnInit {
     let newPhoto: Photo = {
       title: input.value,
       id: 0,
+      thumbnailUrl: '',
     };
     this.photos.splice(0, 0, newPhoto);
 
@@ -49,6 +50,7 @@ export class HttpLearningComponent implements OnInit {
     let updatedPhoto: Photo = {
       title: 'New Title',
       id: photo.id,
+      thumbnailUrl: '',
     };
 
     this.service.update(photo, updatedPhoto).subscribe((updatedPhoto) => {

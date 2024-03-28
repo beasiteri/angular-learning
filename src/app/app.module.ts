@@ -9,12 +9,12 @@ import { TemplateDrivenFormLearningComponent } from './modules/template-driven-f
 import { ReactiveFormLearningComponent } from './modules/reactive-form-learning/components/reactive-form-learning.component';
 import { FormArrayLearningComponent } from './modules/reactive-form-learning/components/form-array-learning/form-array-learning.component';
 import { SharedModule } from './shared/shared.module';
-import { NavbarComponent } from './modules/routing-learning/navbar/navbar.component';
-import { HomeComponent } from './modules/routing-learning/home/home.component';
-import { GithubProfileComponent } from './modules/routing-learning/github-profile/github-profile.component';
-import { NotFoundComponent } from './modules/routing-learning/not-found/not-found.component';
+import { NavbarComponent } from './modules/routing-learning/components/navbar/navbar.component';
+import { HomeComponent } from './modules/routing-learning/components/home/home.component';
+import { GithubProfileComponent } from './modules/routing-learning/components/github-profile/github-profile.component';
+import { NotFoundComponent } from './modules/routing-learning/components/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
-import { GithubFollowersComponent } from './modules/routing-learning/github-followers/github-followers.component';
+import { GithubFollowersComponent } from './modules/routing-learning/components/github-followers/github-followers.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { GithubFollowersComponent } from './modules/routing-learning/github-foll
     SharedModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'http-learning', component: HttpLearningComponent },
+      { path: 'photos', component: HttpLearningComponent },
       { path: 'followers/:username', component: GithubProfileComponent },
       { path: 'followers', component: GithubFollowersComponent },
       { path: 'template-driven-form-learning', component: TemplateDrivenFormLearningComponent },
