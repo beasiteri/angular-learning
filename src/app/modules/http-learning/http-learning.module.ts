@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormLearningComponent } from './reactive-form-learning.component';
+import { HttpLearningComponent } from './components/http-learning.component';
 
 @NgModule({
   declarations: [
-    ReactiveFormLearningComponent,
+    HttpLearningComponent,
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
   ]
 })
-export class ReactiveFormLearningModule {}
+export class HttpLearningModule { }

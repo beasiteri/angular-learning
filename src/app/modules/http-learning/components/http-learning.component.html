@@ -1,0 +1,25 @@
+<input
+  type="text"
+  class="form-control"
+  #photoTitle
+  (keyup.enter)="createPhoto(photoTitle)"
+/>
+<ul class="list-group">
+  <li *ngFor="let photo of photos" class="list-group-item">
+    {{ photo.title }}
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-sm"
+      (click)="updatePhoto(photo)"
+    >
+      Update
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-danger btn-sm"
+      (click)="deletePhoto(photo)"
+    >
+      Delete
+    </button>
+  </li>
+</ul>

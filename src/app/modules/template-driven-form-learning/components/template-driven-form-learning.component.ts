@@ -7,13 +7,13 @@ import { Component } from "@angular/core";
 })
 export class TemplateDrivenFormLearningComponent {
   contactMethods = [
-    {id: 1, name: 'Email'},
-    {id: 2, name: 'Phone'},
+    { id: 1, name: 'Email' },
+    { id: 2, name: 'Phone' },
   ];
 
   animals = [
-    {id: 1, name: 'Cat'},
-    {id: 2, name: 'Dog'},
+    { id: 1, name: 'Cat' },
+    { id: 2, name: 'Dog' },
   ];
 
   log(x: any) {
